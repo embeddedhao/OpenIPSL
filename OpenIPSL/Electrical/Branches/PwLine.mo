@@ -48,9 +48,9 @@ protected
 equation
   //Calculations for the power flow display
   P12 = real(vs*conj(is))*S_b;
-  P21 = -real(vr*conj(ir))*S_b;
+  P21 = real(vr*conj(ir))*S_b;
   Q12 = imag(vs*conj(is))*S_b;
-  Q21 = -imag(vr*conj(ir))*S_b;
+  Q21 = imag(vr*conj(ir))*S_b;
   //PI model with different line openings
   if time >= t1 and time < t2 then
     if opening == 1 then
